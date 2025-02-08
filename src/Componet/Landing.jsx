@@ -5,6 +5,8 @@ import React from 'react';
 
 
 const Landing = () => {
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const month = ['1','2','3','4','5','6','7','8','9','10','11','12']
     return (
         <div className="bg-gray-900 text-white min-h-screen">
             <main>
@@ -20,14 +22,15 @@ const Landing = () => {
                     <p className="text-gray-300 mb-4">
                         Interested in working together? Feel free to reach out!
                     </p>
-                    <Button> <a href="mailto:firozkhan192006@gmail.com" className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg font-medium">
+                    <Button> <a target='_blank' href="mailto:firozkhan192006@gmail.com" className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg font-medium">
                         Email Me
                     </a></Button>
                 </section>
             </main>
 
             <footer className="py-6 text-center bg-gray-800">
-                <p className="text-gray-500">&copy; {new Date().getFullYear()} Firoz's Portfolio. All rights reserved.</p>
+                <p className="text-gray-500">&copy; { new Date().getDate()}/{month[new Date().getMonth()]}/{new Date().getFullYear()}
+                &nbsp;&nbsp;&nbsp;{days[new Date().getDay()]} Firoz's Portfolio. All rights reserved.</p>
             </footer>
         </div>
     );
